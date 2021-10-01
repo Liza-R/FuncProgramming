@@ -11,9 +11,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        oneSorted()
     }
-
-
+    func oneSorted(){
+        print("Сортировка массива:")
+        var massInt: [Int] = []
+        for _ in 0...19{
+            let n = Int.random(in: 20...40)
+            massInt.append(n)
+        }
+        print("Массив с рандомными числами:\n\(massInt)\n")
+        print("Отсортированный массив:\n\(massInt.sorted())")
+    }
 }
 

@@ -99,12 +99,9 @@
 		2086FF212707609D006FFA28 /* HW_10 */ = {
 			isa = PBXGroup;
 			children = (
-				2086FF222707609D006FFA28 /* AppDelegate.swift */,
-				2086FF242707609D006FFA28 /* SceneDelegate.swift */,
-				2086FF262707609D006FFA28 /* ViewController.swift */,
+				2086FF52270760AC006FFA28 /* Other */,
 				2086FF282707609D006FFA28 /* Main.storyboard */,
-				2086FF2B2707609E006FFA28 /* Assets.xcassets */,
-				2086FF2D2707609E006FFA28 /* LaunchScreen.storyboard */,
+				2086FF262707609D006FFA28 /* ViewController.swift */,
 				2086FF302707609E006FFA28 /* Info.plist */,
 			);
 			path = HW_10;
@@ -125,6 +122,17 @@
 				2086FF452707609E006FFA28 /* HW_10UITestsLaunchTests.swift */,
 			);
 			path = HW_10UITests;
+			sourceTree = "<group>";
+		};
+		2086FF52270760AC006FFA28 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2086FF222707609D006FFA28 /* AppDelegate.swift */,
+				2086FF242707609D006FFA28 /* SceneDelegate.swift */,
+				2086FF2D2707609E006FFA28 /* LaunchScreen.storyboard */,
+				2086FF2B2707609E006FFA28 /* Assets.xcassets */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
