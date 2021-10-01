@@ -14,8 +14,12 @@ class ViewController: UIViewController {
         oneSorted()
         twoMap()
         threeReduce()
+        fourVoid()
+        fiveTwoFuncs()
+        sixAlgorithm()
     }
     func oneSorted(){
+        //Отсортируйте массив чисел по возрастанию, используя функцию Sorted
         print("Сортировка массива")
         var massInt: [Int] = []
         for _ in 0...19{
@@ -26,6 +30,7 @@ class ViewController: UIViewController {
         print("Отсортированный массив:\n\(massInt.sorted())\n")
     }
     func twoMap(){
+        //Переведите массив чисел в массив строк с помощью функции Map
         print("Перевод чисел в строки")
         var massInt: [Int] = []
         for _ in 0...19{
@@ -36,10 +41,20 @@ class ViewController: UIViewController {
         print("Отформатированный массив:\n\(massInt.map {$0.description})\n")
     }
     func threeReduce(){
+        //Переведите массив строк с именами людей в одну строку, содержащую все эти имена, с помощью функции Reduce
         print("Перевод массива строк в одну строку")
         let massNames = ["Masha, Dasha, Sasha, Anthon, Philip, Nastya, Liza"]
         print("Исходный массив имён:\n\(massNames)")
         print("Строка из имён массива:\n\(massNames.reduce("") {(total, name) in total + "\(name)"})\n")
+    }
+    func fourVoid(){
+        //Напишите функцию, которая принимает в себя функцию c типом (Void) -&gt; Void, которая будет вызвана с задержкой в две секунды.
+    }
+    func fiveTwoFuncs(){
+        //Напишите функцию, которая принимает в себя две функции и возвращает функцию, которая при вызове выполнит первые две функции
+    }
+    func sixAlgorithm(){
+        //Напишите функцию, которая сортирует массив по переданному алгоритму: принимает в себя массив чисел и функцию, которая берёт на вход два числа, возвращает Bool (должно ли первое число идти после второго) и возвращает массив, отсортированный по этому алгоритму.
     }
 }
 
