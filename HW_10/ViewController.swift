@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         oneSorted()
         twoMap()
         threeReduce()
-        fourVoid()
+        fourVoid(funcV: funcForFour)
         fiveTwoFuncs(func1: func1ForFive, func2: func2ForFive)
         
         var massInt: [Int] = []
@@ -49,10 +49,17 @@ class ViewController: UIViewController {
         print("Исходный массив имён:\n\(massNames)")
         print("Строка из имён массива:\n\(massNames.reduce("") {(total, name) in total + "\(name)"})\n")
     }
-    func fourVoid(){
+    func fourVoid(funcV: @escaping() -> Void){
         //Напишите функцию, которая принимает в себя функцию c типом (Void) -&gt; Void, которая будет вызвана с задержкой в две секунды.
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            funcV()
+        }
     }
+    
+    func funcForFour(){
+        print("Delayed function call")
+    }
+    
     func fiveTwoFuncs(func1: () -> Void, func2: () -> Void) -> Void{
         //Напишите функцию, которая принимает в себя две функции и возвращает функцию, которая при вызове выполнит первые две функции
         func func3(){
