@@ -8,14 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         oneSorted()
         twoMap()
         threeReduce()
         fourVoid()
-        fiveTwoFuncs()
         sixAlgorithm()
     }
     func oneSorted(){
@@ -49,12 +47,18 @@ class ViewController: UIViewController {
     }
     func fourVoid(){
         //Напишите функцию, которая принимает в себя функцию c типом (Void) -&gt; Void, которая будет вызвана с задержкой в две секунды.
+        
     }
-    func fiveTwoFuncs(){
+    func fiveTwoFuncs(func1: () -> Void, func2: () -> Void) -> Void{
         //Напишите функцию, которая принимает в себя две функции и возвращает функцию, которая при вызове выполнит первые две функции
+        func func3(){
+            func1()
+            func2()
+        }
+        return func3()
     }
     func sixAlgorithm(){
         //Напишите функцию, которая сортирует массив по переданному алгоритму: принимает в себя массив чисел и функцию, которая берёт на вход два числа, возвращает Bool (должно ли первое число идти после второго) и возвращает массив, отсортированный по этому алгоритму.
+        
     }
 }
-
