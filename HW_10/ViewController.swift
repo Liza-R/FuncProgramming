@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         twoMap()
         threeReduce()
         fourVoid()
+        fiveTwoFuncs(func1: func1ForFive, func2: func2ForFive)
         
         var massInt: [Int] = []
         for _ in 0...19{
@@ -60,6 +61,13 @@ class ViewController: UIViewController {
         }
         return func3()
     }
+    func func1ForFive(){
+        print("func1")
+    }
+    func func2ForFive(){
+        print("func2")
+    }
+    
     func sixAlgorithm(mass: [Int], algFunc: (Int, Int) -> Bool) -> [Int]{
         //Напишите функцию, которая сортирует массив по переданному алгоритму: принимает в себя массив чисел и функцию, которая берёт на вход два числа, возвращает Bool (должно ли первое число идти после второго) и возвращает массив, отсортированный по этому алгоритму.
         
