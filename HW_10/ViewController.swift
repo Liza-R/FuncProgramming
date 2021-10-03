@@ -14,15 +14,19 @@ class ViewController: UIViewController {
         twoMap()
         threeReduce()
         fourVoid()
-        sixAlgorithm()
+        
+        var massInt: [Int] = []
+        for _ in 0...19{
+            massInt.append(Int.random(in: 20...40))
+        }
+        print(sixAlgorithm(mass: massInt, algFunc: algFuncForSix(one:two:)))
     }
     func oneSorted(){
         //Отсортируйте массив чисел по возрастанию, используя функцию Sorted
         print("Сортировка массива")
         var massInt: [Int] = []
         for _ in 0...19{
-            let n = Int.random(in: 20...40)
-            massInt.append(n)
+            massInt.append(Int.random(in: 20...40))
         }
         print("Массив с рандомными числами:\n\(massInt)")
         print("Отсортированный массив:\n\(massInt.sorted())\n")
@@ -32,8 +36,7 @@ class ViewController: UIViewController {
         print("Перевод чисел в строки")
         var massInt: [Int] = []
         for _ in 0...19{
-            let n = Int.random(in: 20...40)
-            massInt.append(n)
+            massInt.append(Int.random(in: 20...40))
         }
         print("Массив с рандомными числами:\n\(massInt)")
         print("Отформатированный массив:\n\(massInt.map {$0.description})\n")
@@ -57,8 +60,26 @@ class ViewController: UIViewController {
         }
         return func3()
     }
-    func sixAlgorithm(){
+    func sixAlgorithm(mass: [Int], algFunc: (Int, Int) -> Bool) -> [Int]{
         //Напишите функцию, которая сортирует массив по переданному алгоритму: принимает в себя массив чисел и функцию, которая берёт на вход два числа, возвращает Bool (должно ли первое число идти после второго) и возвращает массив, отсортированный по этому алгоритму.
         
+        let whenSort = algFunc(mass[0], mass[1])
+        var newMass = mass
+        switch whenSort {
+        case true:
+            newMass.sort { $0 > $1 }
+        case false:
+            newMass.sort { $0 < $1 }
+        }
+        return newMass
+    }
+    func algFuncForSix(one: Int, two: Int) -> Bool{
+        var whenSort = false
+        if one >= two{
+            whenSort = true
+        }else{
+            whenSort = false
+        }
+        return whenSort
     }
 }
